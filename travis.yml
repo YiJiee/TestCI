@@ -1,0 +1,18 @@
+language: cpp
+
+matrix:
+  include:
+    - os: windows
+      compiler: gcc
+
+script:
+  # Build and test
+  - cd Team00/Code00
+  - mkdir build
+  - cd build
+  - cmake -A Win32 ..
+  - cmake --build . --target unit_testing --config Release
+  - cmake --build . --target integration_testing --config Release
+  - cmake --build . --target autotester --config Release
+  - cd ../../
+  - Team00/Code00/build/src/autotester/Release/autotester Team00/Tests00/Sample_source.txt Team00/Tests00/Sample_queries.txt Team00/Tests00/out.xml > log.txt
