@@ -1,0 +1,17 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "autotester.exe (src\\autotester\\autotester.exe)",
+      "name": "autotester.exe (src\\autotester\\autotester.exe)",
+      "args": [
+        "C:\\Users\\Lim\\Home\\CP_StartupSPASolution\\Team00\\Tests00\\Sample_source.txt",
+        "C:\\Users\\Lim\\Home\\CP_StartupSPASolution\\Team00\\Tests00\\Sample_queries.txt",
+        "C:\\Users\\Lim\\Home\\CP_StartupSPASolution\\Team00\\Tests00\\out.xml"
+      ]
+    }
+  ]
+}
