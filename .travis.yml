@@ -14,5 +14,6 @@ script:
   - cmake --build . --target unit_testing --config Release
   - cmake --build . --target integration_testing --config Release
   - cmake --build . --target autotester --config Release
-  - cd ../../
+  - cd ../..
+  - ls
   - Team00/Code00/build/src/autotester/Release/autotester Team00/Tests00/Sample_source.txt Team00/Tests00/Sample_queries.txt Team00/Tests00/out.xml > log.txt
