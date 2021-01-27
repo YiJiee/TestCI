@@ -45,5 +45,6 @@ if TOTAL_TEST_CASES != 0:
 if TOTAL_TEST_CASES != 0 and (PASSED_TEST_CASES / TOTAL_TEST_CASES) >= PASS_RATE:
     sys.exit(0)
 else:
+    print("Failed to meet specified pass rate of {}".format(PASS_RATE))
     sys.exit(1)
     
