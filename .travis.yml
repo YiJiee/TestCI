@@ -6,8 +6,12 @@ matrix:
       compiler: gcc
 
 script:
+  # Install python 3.7
+  - choco install python --version=3.7.6
+  - python --version
+
   # Build and test
-  - cd Team00/Code00
+  - cd Team11/Code11
   - mkdir build
   - cd build
   - cmake -A Win32 ..
@@ -16,4 +20,5 @@ script:
   - cmake --build . --target autotester --config Release
   - cd ../../..
   - ls
-  - Team00/Code00/build/src/autotester/Release/autotester Team00/Tests00/Sample_source.txt Team00/Tests00/Sample_queries.txt Team00/Tests00/out.xml > log.txt
+  - Team11/Code11/build/src/autotester/Release/autotester Team11/Tests11/Sample_source.txt Team11/Tests11/Sample_queries.txt Team11/Tests11/out.xml > ./log.txt
+  - cat ./log.txt
