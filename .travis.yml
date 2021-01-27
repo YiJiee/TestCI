@@ -4,16 +4,14 @@ matrix:
   include:
     - os: windows
       compiler: gcc
-      python: "3.7"
+      language: shell
       before_install:
-        - choco install python3
-        - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
-
-before_script:
-  - python --version
-  - python3 --version
+        - choco install python --version=3.7.6
+        - python -m pip install --upgrade
+      env: PATH="/c/Python37:/c/Python37/Scripts:$PATH"
 
 script:
+  - python --version
   # Build and test
   - cd Team11/Code11
   - mkdir build
