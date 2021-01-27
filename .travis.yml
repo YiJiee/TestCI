@@ -20,7 +20,11 @@ script:
   - cmake --build . --target unit_testing --config Release
   - cmake --build . --target integration_testing --config Release
   - cmake --build . --target autotester --config Release
+  # Go back to root directory and evaluate test results
   - cd ../../..
-  - ls
-  - Team11/Code11/build/src/autotester/Release/autotester Team11/Tests11/Sample_source.txt Team11/Tests11/Sample_queries.txt Team11/Tests11/out.xml > ./log.txt
-  - cat ./log.txt
+  - mkdir test_result
+  - Team11/Code11/build/src/autotester/Release/autotester Team11/Tests11/Sample_source.txt Team11/Tests11/Sample_queries.txt Team11/Tests11/out.xml > ./ci_test/log.txt
+  - cat ./ci_test/log.txt
+  - cd ci_test
+  # -p flag represents passing rate
+  - python evaluate.py -p 0
