@@ -5,11 +5,14 @@ matrix:
     - os: windows
       compiler: gcc
 
-script:
+install:
   # Install python 3.7
   - choco install python --version=3.7.6
+
+before_script:
   - python --version
 
+script:
   # Build and test
   - cd Team11/Code11
   - mkdir build
