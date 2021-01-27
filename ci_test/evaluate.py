@@ -39,6 +39,9 @@ for file_path in os.listdir():
                 PASSED_TEST_CASES += 1
             TOTAL_TEST_CASES += 1
 
+if TOTAL_TEST_CASES != 0:
+    print("Total test cases: {}, passed test cases: {}, passing rate: {}".format(TOTAL_TEST_CASES, PASSED_TEST_CASES, PASSED_TEST_CASES / TOTAL_TEST_CASES))
+
 if TOTAL_TEST_CASES != 0 and (PASSED_TEST_CASES / TOTAL_TEST_CASES) >= PASS_RATE:
     sys.exit(0)
 else:
