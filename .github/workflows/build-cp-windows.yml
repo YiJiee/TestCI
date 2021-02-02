@@ -37,6 +37,8 @@ jobs:
           cmake --build . --target integration_testing --config Release
           cmake --build . --target autotester --config Release
           cd ../../..
+          Team11/Code11/build/src/unit_testing/Release/unit_testing
+          Team11/Code11/build/src/integration_testing/Release/integration_testing
           Team11/Code11/build/src/autotester/Release/autotester Team11/Tests11/Sample_source.txt Team11/Tests11/Sample_queries.txt Team11/Tests11/out.xml > ./ci_test/autotester_log.txt
           cat ./ci_test/autotester_log.txt
           cd ci_test
