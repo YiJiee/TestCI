@@ -12,7 +12,7 @@ TEST_CASE("1st Test") {
     string myText;
 
 	ifstream myfile;
-	myfile.open("../../../../tests/prototype_sample_SIMPLE_source.txt");
+	myfile.open("Team11/Code11/tests/prototype_sample_SIMPLE_source.txt");
 	while (getline(myfile, myText)) {
 		// Output the text from the file
 		cout << myText << endl;
