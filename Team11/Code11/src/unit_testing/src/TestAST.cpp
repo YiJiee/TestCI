@@ -17,7 +17,7 @@ TEST_CASE("1st Test") {
 	}
 	myfile.close();
 	
-    require(1 == 1);
+    REQUIRE(1 == 1);
 }
 
 
